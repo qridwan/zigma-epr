@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { Divider, List, Typography } from '@mui/material';
+import { Box, Divider, List, Typography } from '@mui/material';
 
 // project imports
 import NavItem from '../NavItem';
@@ -28,9 +28,20 @@ const NavGroup = ({ item }) => {
                 );
         }
     });
+    const utilitiesStyles = {
+        position: 'absolute',
+        bottom: '10%',
+        left: 0,
+        width: '85%',
+        margin: '0 20px'
+    };
+
+    const listStyles = {
+        marginTop: '40px'
+    };
 
     return (
-        <>
+        <Box sx={item.id === 'utilities' ? utilitiesStyles : listStyles}>
             <List
                 subheader={
                     item.title && (
@@ -49,8 +60,8 @@ const NavGroup = ({ item }) => {
             </List>
 
             {/* group divider */}
-            <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-        </>
+            {item.id !== 'utilities' && <Divider sx={{ mt: 0.25, mb: 1.25, mx: 2 }} />}
+        </Box>
     );
 };
 
