@@ -5,8 +5,6 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import ImageIcon from '@mui/icons-material/Image';
 import { ReactComponent as Ticked } from '../../assets/images/icons/ticked.svg';
 import { ReactComponent as Verification } from '../../assets/images/icons/verification.svg';
 import { ReactComponent as Schedule } from '../../assets/images/icons/schedule.svg';
