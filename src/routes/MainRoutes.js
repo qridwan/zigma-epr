@@ -3,19 +3,18 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
+import PurchaseLayout from 'layout/MainLayout/Purchase';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
-
-// utilities routing
-const PurchaseOrder = Loadable(lazy(() => import('views/purchase-order')));
+const PurchaseOrder = Loadable(lazy(() => import('views/purchase-order/Purchase')));
+const OrderStatus = Loadable(lazy(() => import('views/purchase-order/order-states')));
 const Profile = Loadable(lazy(() => import('views/profile')));
 const Download = Loadable(lazy(() => import('views/downloads')));
-const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 const Settings = Loadable(lazy(() => import('views/settings')));
 
-// sample page routing
-const SamplePage = Loadable(lazy(() => import('views/sample-page')));
+// notification page routing
+const Notification = Loadable(lazy(() => import('views/notification')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -31,22 +30,26 @@ const MainRoutes = {
             path: 'dashboard',
             children: [
                 {
-                    path: 'default',
+                    path: '',
                     element: <DashboardDefault />
                 }
             ]
         },
         {
-            path: 'dashboard',
+            path: 'purchase-order',
+            element: <PurchaseLayout />,
             children: [
                 {
-                    path: 'purchase-order',
+                    path: 'purchase',
                     element: <PurchaseOrder />
+                },
+                {
+                    path: 'order-status',
+                    element: <OrderStatus />
                 }
             ]
         },
         {
-            path: 'dashboard',
             children: [
                 {
                     path: 'profile',
@@ -55,22 +58,16 @@ const MainRoutes = {
             ]
         },
         {
-            path: 'dashboard',
-            children: [
-                {
-                    path: 'downloads',
-                    element: <Download />
-                }
-            ]
+            path: '/downloads',
+            element: <Download />
         },
         {
-            path: 'dashboard',
-            children: [
-                {
-                    path: 'settings',
-                    element: <Settings />
-                }
-            ]
+            path: '/settings',
+            element: <Settings />
+        },
+        {
+            path: '/user/notification',
+            element: <Notification />
         }
     ]
 };

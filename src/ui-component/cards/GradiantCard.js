@@ -4,18 +4,21 @@ import { forwardRef } from 'react';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Card, CardContent, CardHeader, Divider, Typography } from '@mui/material';
+import theme from 'themes';
 
 // constant
 const headerSX = {
-    '& .MuiCardHeader-action': { mr: 0 }
+    '& .MuiCardHeader-action': { mr: 0, color: 'white' },
+    '& .MuiCardHeader-title': { mr: 0, color: '' },
+    background: '#86C029',
+    boxShadow: '0px 5px 5px rgba(0, 0, 0, 0.3)'
+
+    // borderRadius: '30px 30px 0px 0px'
 };
-
-// ==============================|| CUSTOM MAIN CARD ||============================== //
-
-const MainCard = forwardRef(
+const GradiantCard = forwardRef(
     (
         {
-            border = false,
+            border = true,
             boxShadow,
             children,
             content = true,
@@ -37,9 +40,10 @@ const MainCard = forwardRef(
                 ref={ref}
                 {...others}
                 sx={{
-                    border: border ? '1px solid' : 'none',
-                    height: '100%',
+                    background: 'linear-gradient(180deg, #94DC45 0%, rgba(255, 255, 255, 0) 100%)',
                     borderColor: theme.palette.primary[200] + 75,
+                    height: '100%',
+                    minHeight: '60vh',
                     boxShadow: '-5px -5px 10px rgba(255, 255, 255, 0.8), 5px 5px 10px rgba(0, 0, 0, 0.2)',
                     ':hover': {
                         boxShadow: boxShadow
@@ -50,15 +54,27 @@ const MainCard = forwardRef(
                 }}
             >
                 {/* card header and action */}
-                {!darkTitle && title && (
-                    <CardHeader sx={headerSX} title={<Typography variant="h2">{title}</Typography>} action={secondary} />
+                {title && (
+                    <CardHeader
+                        title={
+                            <Typography variant="h2" color="green">
+                                {title}
+                            </Typography>
+                        }
+                        action={secondary}
+                    />
                 )}
                 {darkTitle && title && (
-                    <CardHeader sx={headerSX} title={<Typography variant="h2">{title}</Typography>} action={secondary} />
+                    <CardHeader
+                        sx={headerSX}
+                        title={
+                            <Typography variant="h2" color="green">
+                                {title}
+                            </Typography>
+                        }
+                        action={secondary}
+                    />
                 )}
-
-                {/* content & header divider */}
-                {title && <Divider />}
 
                 {/* card content */}
                 {content && (
@@ -72,7 +88,7 @@ const MainCard = forwardRef(
     }
 );
 
-MainCard.propTypes = {
+GradiantCard.propTypes = {
     border: PropTypes.bool,
     boxShadow: PropTypes.bool,
     children: PropTypes.node,
@@ -86,4 +102,4 @@ MainCard.propTypes = {
     title: PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.object])
 };
 
-export default MainCard;
+export default GradiantCard;
