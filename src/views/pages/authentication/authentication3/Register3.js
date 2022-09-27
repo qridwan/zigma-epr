@@ -53,7 +53,7 @@ const Register = () => {
                                                         fontSize="16px"
                                                         textAlign={matchDownSM ? 'center' : 'inherit'}
                                                     >
-                                                        Enter your credentials to continue
+                                                        Enter your phone number to continue
                                                     </Typography>
                                                 </Stack>
                                             </Grid>
@@ -81,9 +81,6 @@ const Register = () => {
                             </AuthCardWrapper>
                         </Grid>
                     </Grid>
-                </Grid>
-                <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
-                    <AuthFooter />
                 </Grid>
             </Grid>
         </AuthWrapper1>

@@ -26,7 +26,7 @@ const utilities = {
             id: 'logout',
             title: 'Logout',
             type: 'item',
-            url: '/',
+            url: '/pages/login/login3',
             icon: icons.IconLogout,
             breadcrumbs: false
         }
