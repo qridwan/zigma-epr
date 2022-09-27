@@ -79,7 +79,7 @@ const NavItem = ({ item, level }) => {
                 py: level > 1 ? 1 : 1.25,
                 pl: `${level * 24}px`
             }}
-            selected={Boolean(route?.path === route?.item)}
+            selected={item.id !== 'help' && Boolean(route?.path === route?.item)}
             onClick={() => itemHandler(item.id)}
         >
             <ListItemIcon sx={{ my: 'auto', minWidth: !item?.icon ? 18 : 36 }}>{itemIcon}</ListItemIcon>

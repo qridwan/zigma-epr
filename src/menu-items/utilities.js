@@ -18,7 +18,7 @@ const utilities = {
             id: 'help',
             title: 'Help',
             type: 'item',
-            url: '/',
+            url: '/dashboard/',
             icon: icons.IconHelp,
             breadcrumbs: false
         },
