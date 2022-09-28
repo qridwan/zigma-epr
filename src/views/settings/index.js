@@ -5,7 +5,7 @@ import MainCard from 'ui-component/cards/MainCard';
 import Link from '@mui/material/Link';
 
 const styles = {
-    width: '250px',
+    width: '200px',
     height: '50px',
     fontSize: '11px',
     textTransform: 'uppercase',
@@ -47,21 +47,21 @@ const index = () => {
             </Typography>
             <Stack>
                 <Grid container justifyContent="space-between">
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={12} sm={12} md={5}>
                         <Grid container spacing={3}>
-                            <Grid item xs={12} md={12}>
+                            <Grid item xs={12} sm={12} md={12}>
                                 <button style={styles}>Forgot Password</button>
                             </Grid>
-                            <Grid item xs={12} md={12}>
+                            <Grid item xs={12} sm={12} md={12}>
                                 <button style={styles}>Notification</button>
                             </Grid>
-                            <Grid item xs={12} md={12}>
+                            <Grid item xs={12} sm={12} md={12}>
                                 <button style={styles}>Downloaded Documents History</button>
                             </Grid>
-                            <Grid item xs={12} md={12}>
+                            <Grid item xs={12} sm={12} md={12}>
                                 <button style={styles}>Status of Rejected Documents</button>
                             </Grid>
-                            <Grid item xs={12} md={12} sx={{ mb: 5 }}>
+                            <Grid item xs={12} sm={12} md={12} sx={{ mb: 5 }}>
                                 <button style={styles}>Logout</button>
                             </Grid>
                         </Grid>

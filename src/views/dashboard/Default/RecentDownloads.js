@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IconFileDescription, IconPoint } from '@tabler/icons';
 import GreenCard from 'ui-component/cards/GreenCard';
 import { Box, Button, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, IconButton } from '@mui/material';
@@ -76,9 +77,11 @@ const RecentDownloads = () => {
                 </List>
             </Box>
             <Stack direction="row" justifyContent="end" mt={0}>
-                <Button color="secondary" variant="outlined">
-                    Show More
-                </Button>
+                <Link to="/dashboard/downloads/history" style={{ textDecoration: 'none' }}>
+                    <Button color="secondary" variant="outlined">
+                        Show more
+                    </Button>
+                </Link>
             </Stack>
         </GreenCard>
     );
