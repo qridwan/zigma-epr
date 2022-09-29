@@ -12,12 +12,14 @@ import { MENU_OPEN, SET_MENU } from 'store/actions';
 
 // assets
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { useState } from 'react';
 
 // ==============================|| SIDEBAR MENU LIST ITEMS ||============================== //
 
 const NavItem = ({ item, level }) => {
     const theme = useTheme();
     const dispatch = useDispatch();
+    const [route, setRoute] = useState();
     const customization = useSelector((state) => state.customization);
     const matchesSM = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -62,7 +64,9 @@ const NavItem = ({ item, level }) => {
         }
         // eslint-disable-next-line
     }, []);
-
+    useEffect(() => {
+        setRoute({ path: document.location.pathname.toString().split('/')[1], item: item.url.toString().split('/')[1] });
+    }, [document.location.pathname]);
     return (
         <ListItemButton
             {...listItemProps}
@@ -75,7 +79,7 @@ const NavItem = ({ item, level }) => {
                 py: level > 1 ? 1 : 1.25,
                 pl: `${level * 24}px`
             }}
-            selected={customization.isOpen.findIndex((id) => id === item.id) > -1}
+            selected={item.id !== 'help' && Boolean(route?.path === route?.item)}
             onClick={() => itemHandler(item.id)}
         >
             <ListItemIcon sx={{ my: 'auto', minWidth: !item?.icon ? 18 : 36 }}>{itemIcon}</ListItemIcon>

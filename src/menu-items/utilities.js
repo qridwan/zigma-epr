@@ -18,7 +18,7 @@ const utilities = {
             id: 'help',
             title: 'Help',
             type: 'item',
-            url: '/',
+            url: '/dashboard/',
             icon: icons.IconHelp,
             breadcrumbs: false
         },
@@ -26,7 +26,7 @@ const utilities = {
             id: 'logout',
             title: 'Logout',
             type: 'item',
-            url: '/',
+            url: '/pages/login/login3',
             icon: icons.IconLogout,
             breadcrumbs: false
         }
