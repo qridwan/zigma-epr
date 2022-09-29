@@ -28,7 +28,7 @@ const rows = [
     { id: 3, product: 'Post Consumer Plastics', order: 'WP-EPR-0122-003', invoice: 'INV-WP-EPR-003', view: 'Open File' }
 ];
 
-const index = () => {
+const Invoice = () => {
     return (
         <>
             <Typography variant="h2" color="gray">
@@ -56,8 +56,7 @@ const index = () => {
                     '& .super-app-theme--header': {
                         backgroundColor: 'gray',
                         color: 'white'
-                    },
-                    borderRadius: '50%'
+                    }
                 }}
             >
                 <Box sx={{ height: 300, width: { xs: '60%', sm: '65%', md: '80%' } }}>
@@ -71,4 +70,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Invoice;

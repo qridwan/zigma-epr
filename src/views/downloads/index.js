@@ -3,7 +3,7 @@ import MainCard from 'ui-component/cards/MainCard';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Invoice from './Invoice';
-import Documents from './Documents';
+import DocumentComponent from './DocumentComponent';
 
 const Downloads = () => {
     const [isDocumentClicked, setIsDocumentClicked] = useState(false);
@@ -35,7 +35,7 @@ const Downloads = () => {
                     Document
                 </Button>
             </Stack>
-            <MainCard sx={{ mx: 4, height: '80%' }}>{isInvoiceClicked ? <Invoice /> : <Documents />}</MainCard>
+            <MainCard sx={{ mx: 4, height: '80%' }}>{isInvoiceClicked ? <Invoice /> : <DocumentComponent />}</MainCard>
         </>
     );
 };
