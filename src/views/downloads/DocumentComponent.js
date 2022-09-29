@@ -81,7 +81,7 @@ export default function DocumentComponent() {
                     }
                 }}
             >
-                <Box sx={{ height: 300, width: { xs: '60%', sm: '70%', md: '80%' } }}>
+                <Box sx={{ height: 300, width: { xs: '60%', sm: '70%', md: '80%' }, overflowY: 'scroll' }}>
                     <TableContainer component={Paper}>
                         <Table sx={{ minWidth: 700 }} aria-label="customized table">
                             <TableHead>
