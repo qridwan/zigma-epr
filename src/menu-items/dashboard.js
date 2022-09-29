@@ -15,7 +15,7 @@ const dashboard = {
             id: 'default',
             title: 'Dashboard',
             type: 'item',
-            url: '/dashboard/default',
+            url: '/dashboard/',
             icon: icons.IconLayoutDashboard,
             breadcrumbs: false
         },
@@ -23,7 +23,7 @@ const dashboard = {
             id: 'purchaseOrder',
             title: 'Purchase Order',
             type: 'item',
-            url: '/dashboard/purchase-order',
+            url: '/purchase-order/purchase',
             icon: icons.IconBuildingStore,
             breadcrumbs: false
         },
@@ -31,7 +31,7 @@ const dashboard = {
             id: 'profile',
             title: 'Profile',
             type: 'item',
-            url: '/dashboard/profile',
+            url: '/profile/',
             icon: icons.IconUser,
             breadcrumbs: false
         },
@@ -39,7 +39,7 @@ const dashboard = {
             id: 'download',
             title: 'Download',
             type: 'item',
-            url: '/dashboard/downloads',
+            url: '/downloads/',
             icon: icons.IconArrowBigDownLines,
             breadcrumbs: false
         },
@@ -47,7 +47,7 @@ const dashboard = {
             id: 'settings',
             title: 'Settings',
             type: 'item',
-            url: '/dashboard/settings',
+            url: '/settings/',
             icon: icons.IconSettings,
             breadcrumbs: false
         }
